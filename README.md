@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Marketplace Intelligence Platform: Trust, Pricing, and Demand Dynamics
 
 ## Project Overview
@@ -20,7 +21,6 @@ The project investigates the following research questions:
 
 This project was developed for the Z2004 Database Management Systems course under Track C: Advanced Schema and Analytics Platform.
 
----
 
 # Technologies Used
 
@@ -33,7 +33,6 @@ This project was developed for the Z2004 Database Management Systems course unde
 | SQL | Data querying and analytics |
 | VS Code | Development environment |
 
----
 
 # Dataset Source
 
@@ -57,7 +56,6 @@ Additional marketplace activity was simulated to model:
 
 This hybrid approach combines realism with analytical flexibility.
 
----
 
 # Folder Structure
 
