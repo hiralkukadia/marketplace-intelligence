@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 # Marketplace Intelligence Platform: Trust, Pricing, and Demand Dynamics
+#github link - https://github.com/hiralkukadia/marketplace-intelligence
 
 ## Project Overview
 

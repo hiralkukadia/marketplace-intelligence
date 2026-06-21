@@ -1,0 +1,53 @@
+QUERY 1: Rating vs Demand Analysis
+
+EXPLAIN ANALYZE
+SELECT
+    ls.avg_rating,
+    SUM(ds.views) AS total_views
+FROM listing_stats ls
+JOIN demand_signals ds
+ON ls.listing_id = ds.listing_id
+GROUP BY ls.avg_rating
+ORDER BY ls.avg_rating;
+
+Planning Time: 22.522 ms
+Execution Time: 99.111 ms
+
+------------------------------------------------------------
+
+QUERY 2: Revenue by Category
+
+EXPLAIN ANALYZE
+SELECT
+    c.category_name,
+    SUM(t.price_paid) AS revenue
+FROM transactions t
+JOIN listings l
+ON t.listing_id = l.listing_id
+JOIN categories c
+ON l.category_id = c.category_id
+GROUP BY c.category_name
+ORDER BY revenue DESC;
+
+Planning Time: 20.409 ms
+Execution Time: 186.875 ms
+
+------------------------------------------------------------
+
+QUERY 3: Sales by Rating Group
+
+EXPLAIN ANALYZE
+SELECT
+    CASE
+        WHEN avg_rating >= 4.5 THEN 'Excellent'
+        WHEN avg_rating >= 4.0 THEN 'Good'
+        WHEN avg_rating >= 3.0 THEN 'Average'
+        ELSE 'Poor'
+    END AS rating_group,
+    SUM(total_sales) AS sales
+FROM listing_stats
+GROUP BY rating_group
+ORDER BY sales DESC;
+
+Planning Time: 0.153 ms
+Execution Time: 36.873 ms

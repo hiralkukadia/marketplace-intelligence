@@ -1,0 +1,18 @@
+QUERY 1: Rating vs Demand Analysis
+
+Planning Time: 3.657 ms
+Execution Time: 74.076 ms
+
+------------------------------------------------------------
+
+QUERY 2: Revenue by Category
+
+Planning Time: 2.523 ms
+Execution Time: 111.895 ms
+
+------------------------------------------------------------
+
+QUERY 3: Sales by Rating Group
+
+Planning Time: 0.111 ms
+Execution Time: 37.529 ms
